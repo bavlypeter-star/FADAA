@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FADAA Control Panel</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div id="auth-view" class="auth-container">
+    <h1>FADAA Control Panel</h1>
+    <form id="login-form" class="card">
+      <h2>Login</h2>
+      <label>Username <input name="username" required /></label>
+      <label>Password <input name="password" type="password" required /></label>
+      <button type="submit">Sign In</button>
+      <p id="login-error" class="error"></p>
+    </form>
+  </div>
+
+  <div id="app-view" class="hidden">
+    <header class="navbar">
+      <h1>FADAA</h1>
+      <nav>
+        <button data-page="dashboard">Dashboard</button>
+        <button data-page="ports">Port Forwarding</button>
+        <button data-page="files">File Browser</button>
+        <button data-page="media">Media Viewer</button>
+        <button data-page="settings">User Settings</button>
+      </nav>
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <main>
+      <section id="page-dashboard" class="page card"></section>
+      <section id="page-ports" class="page card hidden"></section>
+      <section id="page-files" class="page card hidden"></section>
+      <section id="page-media" class="page card hidden"></section>
+      <section id="page-settings" class="page card hidden"></section>
+    </main>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
